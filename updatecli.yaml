@@ -1,0 +1,23 @@
+---
+scms:
+  test:
+    name: alxgomz test repo
+    kind: github
+    spec:
+      owner: alxgomz
+      repository: testupdateclipr
+      token: '{{ requiredEnv "GITHUB_TOKEN" }}'
+      username: '{{ requiredEnv "GITHUB_AUTHOR" }}'
+
+pullrequests:
+  testpr:
+    kind: github
+    scmid: test
+    spec:
+      automerge: false
+      description: test PR
+      draft: true
+      labels:
+        - dependencies
+        - test
+      title: PullRequest Title
