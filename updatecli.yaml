@@ -6,8 +6,11 @@ scms:
     spec:
       owner: alxgomz
       repository: testupdateclipr
-      token: {{ requiredEnv "GITHUB_TOKEN" }}
-      username: {{ requiredEnv "GITHUB_AUTHOR" }}
+      branch: main
+      token: >-
+        {{ requiredEnv "GITHUB_TOKEN" }}
+      username: >-
+        {{ requiredEnv "GITHUB_AUTHOR" }}
 
 sources:
   example:
