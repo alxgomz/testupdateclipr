@@ -6,9 +6,22 @@ scms:
     spec:
       owner: alxgomz
       repository: testupdateclipr
-      token: '{{ requiredEnv "GITHUB_TOKEN" }}'
-      username: '{{ requiredEnv "GITHUB_AUTHOR" }}'
+      token: {{ requiredEnv "GITHUB_TOKEN" }}
+      username: {{ requiredEnv "GITHUB_AUTHOR" }}
 
+sources:
+  example:
+    kind: shell
+    spec:
+      command: echo 1.2.3
+targets:
+  target:
+    name: yaml version file
+    sourceid: example
+    kind: yaml
+    spec:
+      file: target.yaml
+      key: version
 pullrequests:
   testpr:
     kind: github
