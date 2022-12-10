@@ -12,6 +12,7 @@ scms:
 sources:
   example:
     kind: shell
+    scmid: test
     spec:
       command: echo 1.2.3
 targets:
